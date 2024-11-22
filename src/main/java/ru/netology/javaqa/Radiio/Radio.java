@@ -13,7 +13,7 @@ public class Radio {
     }
 
     public void setRadioStationNumber(int newRadioStationNumber){
-        if (newRadioStationNumber < 0) {
+        if (newRadioStationNumber <= 0) {
             return;
         }
         if (newRadioStationNumber > 9) {
@@ -23,7 +23,7 @@ public class Radio {
     }
 
     public void setVolume(int newVolume){
-        if (newVolume < 0) {
+        if (newVolume <= 0) {
             return;
         }
         if (newVolume > 100) {
@@ -61,6 +61,9 @@ public class Radio {
     public void increaseVolume() {
         if (volume < 100) {
             volume = volume + 1;
+        }
+        if (volume == 100) {
+            volume = 100;
         }
     }
 

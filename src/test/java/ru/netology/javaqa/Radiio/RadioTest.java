@@ -21,9 +21,9 @@ public class RadioTest {
     public void shouldSetVolume(){
         Radio radio = new Radio();
 
-        radio.setVolume(1009);
+        radio.setVolume(55);
 
-        int expected = 0;
+        int expected = 55;
         int actual = radio.getVolume();
 
         Assertions.assertEquals(expected, actual);
@@ -83,7 +83,7 @@ public class RadioTest {
     public void shouldIncreaseVolume(){
         Radio radio = new Radio();
 
-        radio.volume = 100;
+        radio.volume = 99;
         radio.increaseVolume();
 
         int expected = 100;
@@ -96,10 +96,10 @@ public class RadioTest {
     public void shouldDecreaseVolume(){
         Radio radio = new Radio();
 
-        radio.volume = 100;
+        radio.volume = 0;
         radio.decreaseVolume();
 
-        int expected = 99;
+        int expected = 0;
         int actual = radio.volume;
 
         Assertions.assertEquals(expected, actual);
